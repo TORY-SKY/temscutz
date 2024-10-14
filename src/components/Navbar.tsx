@@ -66,7 +66,7 @@ const NavLinks: FC<NavLinksProps> = ({ navigate }) => (
   <>
     {/* Why Thrivr */}
     <NavigationMenuItem>
-      <NavigationMenuLink href="/why-thrivr" className="hover:text-blue-600">
+      <NavigationMenuLink href="/why-thrivr" className="hover:text-green-500">
         Why Thrivr
       </NavigationMenuLink>
     </NavigationMenuItem>
@@ -144,9 +144,23 @@ const NavLinks: FC<NavLinksProps> = ({ navigate }) => (
     <NavigationMenuItem>
       <button
         onClick={() => navigate("/start")}
-        className="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-blue-700"
+        className="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-500"
       >
-        Start for Free
+        <span>Start for Free</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-4"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
       </button>
     </NavigationMenuItem>
   </>

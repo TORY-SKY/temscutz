@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Grantha&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,4 +66,58 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+:root {
+  --primary-color: rgba(01 4 5 66);
+}
+
+.landingpage-container {
+  display: flex;
+  background-color: rgba(0, 128, 0, 0.24);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  min-width: 300px;
+}
+.mission-int {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 18px;
+  font-size: 0.2rem;
+  max-width: fit-content;
+  background-color: whitesmoke;
+  padding: 2px;
+  font-family: "Noto Sans Grantha", sans-serif;
+}
+.new-label {
+  border-radius: 18px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mission-Hero-text {
+  font-size: 3rem;
+  font-family: "Noto Sans Grantha", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.mission-Hero-text:last-child {
+  font-weight: 600;
+}
+.mission-explained {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  min-width: 100px;
+  max-width: 400px;
+}
+* {
+  /* outline: 1px solid red; */
 }
