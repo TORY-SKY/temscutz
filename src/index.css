@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Grantha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -62,6 +64,9 @@
   * {
     @apply border-border;
     /* outline: 1px solid red; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
   body {
     @apply bg-background text-foreground;
@@ -70,54 +75,100 @@
 
 :root {
   --primary-color: rgba(01 4 5 66);
+  --secondary-color: rgba(236, 229, 202, 0.73);
 }
-
-.landingpage-container {
-  display: flex;
-  background-color: rgba(0, 128, 0, 0.24);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
-  min-width: 300px;
+/* fonts */
+body {
+  min-height: 100vh;
+  font-family: "Noto Sans", sans-serif;
 }
-.mission-int {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-radius: 18px;
-  font-size: 0.2rem;
-  max-width: fit-content;
-  background-color: whitesmoke;
-  padding: 2px;
-  font-family: "Noto Sans Grantha", sans-serif;
+:root {
+  --secondary-color: gold;
+  --black-color: black;
+  --white-color: white;
 }
-.new-label {
-  border-radius: 18px;
-  padding: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mission-Hero-text {
-  font-size: 3rem;
-  font-family: "Noto Sans Grantha", sans-serif;
+/* FONT NAMES */
+.newsreader {
+  font-family: "Newsreader", serif;
   font-weight: 400;
   font-style: normal;
 }
-.mission-Hero-text:last-child {
-  font-weight: 600;
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.mission-explained {
+/* FONT NAMES */
+
+/* navigation bar */
+.classA-nav {
+}
+.classA-nav ul {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+.classA-nav li {
+  height: 40px;
+}
+.classA-nav .a-tags {
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+.classA-nav li:hover {
+  background-color: rgba(241, 240, 192, 0.17);
+  color: black;
+}
+
+.classA-nav li:first-child {
+  margin-right: auto;
+}
+
+.shopping-cart {
+  position: relative;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  padding: 5px;
+}
+.shopping-cart .cart-items {
+  font-size: 0.1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  right: 0;
+  top: 0;
+  padding: 2px;
+}
+/* RESERVE BUTTON STYLING */
+.reserve-btn {
+  position: relative;
+  background-color: var(--black-color);
+  font-family: "Libre Baskerville", serif;
+  padding: 8px;
+  color: var(--white-color);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  text-align: center;
-  min-width: 100px;
-  max-width: 400px;
+  cursor: pointer;
 }
-* {
-  /* outline: 1px solid red; */
+.reserve-btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--secondary-color);
+  left: -5px;
+  top: 5px;
+  z-index: -1;
 }

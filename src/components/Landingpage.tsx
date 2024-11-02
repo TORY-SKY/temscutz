@@ -1,33 +1,13 @@
 const Landingpage = () => {
   return (
     <div className="landingpage-container">
-      <div className="mission-int ">
-        <div className="new-label bg-yellow-500">NEW</div>
-        <p className="tx-md">Create an online store with just your IG page</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-4"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-          />
-        </svg>
-      </div>
       <div className="mission-Hero">
-        <h1 className="mission-Hero-text">Sell easily on</h1>
-        <h1 className="mission-Hero-text tx-lg">Social Media</h1>
+        <h1 className="mission-Hero-text">
+          Always Make Room for Beauty in your Life
+        </h1>
       </div>
       <div className="mission-explained">
-        <p>
-          A dynamic market place that provides creators with tools that helps
-          them grow their business
-        </p>
+        <p>Always Make Room for Beauty in your Life</p>
       </div>
       <div className="clickable-btns">
         <button>

@@ -19,7 +19,9 @@ function App() {
   ]);
   return (
     <>
-      <RouterProvider router={router} />
+      <div className="container-div">
+        <RouterProvider router={router} />
+      </div>
     </>
   );
 }
