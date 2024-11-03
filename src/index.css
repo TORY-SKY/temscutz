@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Grantha&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -73,19 +74,19 @@
   }
 }
 
-:root {
-  --primary-color: rgba(01 4 5 66);
-  --secondary-color: rgba(236, 229, 202, 0.73);
-}
 /* fonts */
 body {
   min-height: 100vh;
   font-family: "Noto Sans", sans-serif;
+  box-sizing: border-box;
+  background-color: rgb(241, 222, 188);
 }
 :root {
+  --primery-color: wheat;
   --secondary-color: gold;
   --black-color: black;
   --white-color: white;
+  --brown-color: rgba(31, 30, 30, 0.882);
 }
 /* FONT NAMES */
 .newsreader {
@@ -98,17 +99,30 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.bodoni-moda {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
 /* FONT NAMES */
 
 /* navigation bar */
-.classA-nav {
-}
-.classA-nav ul {
+
+.classA-nav .nav-links {
   width: 100%;
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
   align-items: center;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  position: relative;
+}
+.Menu-Icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .classA-nav li {
   height: 40px;
@@ -130,19 +144,19 @@ body {
 
 .shopping-cart {
   position: relative;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid black;
   border-radius: 50%;
   padding: 5px;
 }
 .shopping-cart .cart-items {
-  font-size: 0.1rem;
+  font-size: 0.6rem;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: white;
+  background-color: wheat;
   position: absolute;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid black;
   border-radius: 50%;
   width: 12px;
   height: 12px;
@@ -154,7 +168,7 @@ body {
 .reserve-btn {
   position: relative;
   background-color: var(--black-color);
-  font-family: "Libre Baskerville", serif;
+  font-family: "Bodoni Moda", serif;
   padding: 8px;
   color: var(--white-color);
   display: flex;
@@ -167,8 +181,119 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  border: 1px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   left: -5px;
   top: 5px;
   z-index: -1;
+}
+/* side-bar */
+.side-bar.Open {
+  display: flex;
+  transition: linear;
+}
+.close-icon {
+  margin-left: 29px;
+}
+.side-bar.Close {
+  display: none;
+}
+.side-bar {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 60%;
+  background-color: rgba(245, 222, 179, 0.188);
+  z-index: 999;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+.side-bar .li {
+  width: 100%;
+}
+.side-bar .a-tags {
+  width: 100%;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contents-words {
+  text-align: center;
+}
+.hero-text {
+  font-family: "Bodoni Moda", serif;
+  font-size: 5rem;
+  text-align: center;
+  line-height: 95px;
+}
+.landingpage-container {
+  display: flex;
+  flex-direction: column;
+  gap: 95px;
+}
+.content-two {
+  position: relative;
+  padding: 22px;
+  color: white;
+  background-color: var(--brown-color);
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  display: flex;
+  /* align-items: center; */
+}
+.content-two-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.content-two-left-side .hero-text-two {
+  font-size: 3.5rem;
+  width: 500px;
+  line-height: 50px;
+  font-family: "Bodoni Moda", serif;
+}
+.content-two-container .content-two-right-side {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px;
+}
+.content-two-container .content-two-right-side {
+  position: relative;
+  z-index: 200;
+}
+.content-two-container .content-two-right-side::after {
+  content: "";
+  position: absolute;
+  border: 3px solid wheat;
+  width: 100%;
+  height: 100%;
+  left: -40px;
+  top: -30px;
+  z-index: -1;
+}
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .nav-links li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .Menu-Icon {
+    display: flex;
+  }
+}
+@media (min-width: 800px) {
+  .Menu-Icon {
+    display: none;
+  }
 }
