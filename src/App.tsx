@@ -1,8 +1,8 @@
 import Waitlist from "./Waitlist";
 import ErrorPage from "./components/ErrorPage";
-import Navbar from "./components/Navbar";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Test from "./components/Test";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,6 +15,11 @@ function App() {
       path: "/login",
       element: <h1>LOG IN</h1>,
       errorElement: <ErrorPage />,
+    },
+    {
+      path: "/test",
+      element: <Test />,
+      errorElement: <Test />,
     },
   ]);
   return (
