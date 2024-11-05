@@ -1,64 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import "./ReservationModal.css"; // Import custom CSS for styling
 
-const Test: React.FC = () => {
+interface ReservationModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const ReservationModal: React.FC<ReservationModalProps> = ({
+  isOpen,
+  onClose,
+}) => {
+  if (!isOpen) return null;
+
   return (
-    <section style={{ padding: "20px", textAlign: "center" }}>
-      <h1>Our Services</h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          flexWrap: "wrap",
-        }}
-      >
-        <div
-          style={{
-            border: "1px solid #ccc",
-            padding: "15px",
-            borderRadius: "8px",
-            maxWidth: "300px",
-            margin: "10px",
-          }}
-        >
-          <h2>Haircut</h2>
-          <p>
-            Experience a fresh and stylish haircut tailored to your preference
-            by our expert barbers.
-          </p>
-        </div>
-        <div
-          style={{
-            border: "1px solid #ccc",
-            padding: "15px",
-            borderRadius: "8px",
-            maxWidth: "300px",
-            margin: "10px",
-          }}
-        >
-          <h2>Beard Trim</h2>
-          <p>
-            Keep your beard looking sharp and well-groomed with our precise
-            trimming services.
-          </p>
-        </div>
-        <div
-          style={{
-            border: "1px solid #ccc",
-            padding: "15px",
-            borderRadius: "8px",
-            maxWidth: "300px",
-            margin: "10px",
-          }}
-        >
-          <h2>Shave & Facial</h2>
-          <p>
-            Enjoy a relaxing shave and rejuvenating facial treatment for a clean
-            and refreshed look.
-          </p>
-        </div>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <h2>Make a Reservation</h2>
+        <form>
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" placeholder="Your Name" required />
+
+          <label htmlFor="date">Date:</label>
+          <input type="date" id="date" required />
+
+          <label htmlFor="time">Time:</label>
+          <input type="time" id="time" required />
+
+          <label htmlFor="services">Services:</label>
+          <select id="services">
+            <option value="haircut">Haircut</option>
+            <option value="beard-trim">Beard Trim</option>
+            <option value="shave">Shave & Facial</option>
+          </select>
+
+          <button type="submit" className="submit-button">
+            Reserve
+          </button>
+        </form>
+        <button className="close-button " onClick={onClose}>
+          Close
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Test;
+export default ReservationModal;

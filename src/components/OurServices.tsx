@@ -18,7 +18,7 @@ const OurServices: React.FC = () => {
         <div className="line"></div>
       </div>
       <div
-      className="boxes-container"
+        className="boxes-container"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr",
@@ -131,7 +131,7 @@ const OurServices: React.FC = () => {
       </div>
       {loadmore ? (
         <div
-        className="boxes-container"
+          className="boxes-container"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr 1fr",

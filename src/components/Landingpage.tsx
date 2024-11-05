@@ -1,7 +1,13 @@
+import { useState } from "react";
 import heroImg from "../assets/images/pngwing.com.png";
 import Tems from "../assets/Temshaircut/hair1.jpg";
 import OurServices from "./OurServices";
+import ReservationModal from "./Test";
 const Landingpage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="landingpage-container">
       <div className="contents">
@@ -27,9 +33,11 @@ const Landingpage = () => {
               padding: "8px",
               width: "160px",
             }}
+            onClick={openModal}
           >
             Reserve Now
           </button>
+          <ReservationModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
       </div>
       {/* section two */}
@@ -62,6 +70,32 @@ const Landingpage = () => {
         </section>
         <section className="our-services-section">
           <OurServices />
+        </section>
+
+        <section className="">
+          <div className="content-two-container">
+            <div className="content-two-right-side">
+              <img src={Tems} alt="tems at work" style={{ width: "20rem" }} />
+            </div>
+            <div className="content-two-left-side">
+              <h1 className="hero-text-two">Clean Shave For Men</h1>
+              <p>
+                Feel your best with a clean shave that leaves your skin
+                revitalized and refreshed. Experience unparalleled comfort and a
+                polished finish that boosts your confidence.
+              </p>
+              <button
+                className="about-us-btn"
+                style={{
+                  border: "1px solid wheat",
+                  padding: "8px",
+                  width: "120px",
+                }}
+              >
+                Reserve Now
+              </button>
+            </div>
+          </div>
         </section>
       </div>
     </div>
