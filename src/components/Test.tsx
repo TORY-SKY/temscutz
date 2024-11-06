@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "./ReservationModal.css"; // Import custom CSS for styling
 
-interface ReservationModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+
 
 const ReservationModal: React.FC<ReservationModalProps> = ({
   isOpen,
@@ -12,10 +9,14 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
 }) => {
   if (!isOpen) return null;
 
+  // leetcode
+  
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <h2>Make a Reservation</h2>
+        <button onClick={Seive}>print</button>
         <form>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" placeholder="Your Name" required />

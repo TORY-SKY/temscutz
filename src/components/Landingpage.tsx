@@ -1,6 +1,7 @@
 import { useState } from "react";
 import heroImg from "../assets/images/pngwing.com.png";
 import Tems from "../assets/Temshaircut/hair1.jpg";
+import Tem from "../assets/Temshaircut/hair2.jpg";
 import OurServices from "./OurServices";
 import ReservationModal from "./Test";
 const Landingpage = () => {
@@ -43,12 +44,15 @@ const Landingpage = () => {
       {/* section two */}
       <div className="content-two">
         <section className="">
-          <div className="content-two-container">
+          <div
+            className="content-two-container"
+            style={{ margin: "25px 25px" }}
+          >
             <div className="content-two-left-side">
-              <h1 className="hero-text-two">
+              <h1 className="hero-text-two" style={{ marginBottom: "25px" }}>
                 Tailored Grooming for the Mordern Gentlemen
               </h1>
-              <p>
+              <p style={{ marginBottom: "25px" }}>
                 Where classic techniques meet modern style. Discover a grooming
                 experience designed for your unique look and comfort.
               </p>
@@ -58,6 +62,7 @@ const Landingpage = () => {
                   border: "1px solid wheat",
                   padding: "8px",
                   width: "120px",
+                  marginBottom: "65px",
                 }}
               >
                 About Us
@@ -73,13 +78,16 @@ const Landingpage = () => {
         </section>
 
         <section className="">
-          <div className="content-two-container">
+          <div
+            className="content-two-container"
+            style={{ margin: "25px 25px" }}
+          >
             <div className="content-two-right-side">
-              <img src={Tems} alt="tems at work" style={{ width: "20rem" }} />
+              <img src={Tem} alt="tems at work" style={{ width: "20rem" }} />
             </div>
             <div className="content-two-left-side">
               <h1 className="hero-text-two">Clean Shave For Men</h1>
-              <p>
+              <p style={{ marginTop: "25px" }}>
                 Feel your best with a clean shave that leaves your skin
                 revitalized and refreshed. Experience unparalleled comfort and a
                 polished finish that boosts your confidence.
@@ -90,6 +98,7 @@ const Landingpage = () => {
                   border: "1px solid wheat",
                   padding: "8px",
                   width: "120px",
+                  marginTop: "25px",
                 }}
               >
                 Reserve Now

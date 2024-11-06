@@ -266,8 +266,10 @@ body {
 .content-two-container {
   display: grid;
   grid-template-columns: 40% 60%;
-  align-items: center;
-  justify-content: space-around;
+  align-self: center;
+  justify-self: center;
+  /* align-items: center; */
+  /* justify-content: space-around; */
   /* padding: 20px; */
   place-items: center;
 }
