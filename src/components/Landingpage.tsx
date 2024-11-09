@@ -4,6 +4,7 @@ import Tems from "../assets/Temshaircut/hair1.jpg";
 import Tem from "../assets/Temshaircut/hair2.jpg";
 import OurServices from "./OurServices";
 import ReservationModal from "./Test";
+import OurTeam from "./OurTeam";
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -64,8 +65,9 @@ const Landingpage = () => {
                   width: "120px",
                   marginBottom: "65px",
                 }}
+                onClick={openModal}
               >
-                About Us
+                Reserve Now
               </button>
             </div>
             <div className="content-two-right-side">
@@ -106,7 +108,9 @@ const Landingpage = () => {
             </div>
           </div>
         </section>
+        <OurTeam />
       </div>
+       
     </div>
   );
 };

@@ -1,0 +1,48 @@
+.Container {
+  max-width: 124rem;
+  padding: 4rem 1rem;
+  /* margin: 0 auto; */
+}
+.img-container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+}
+.our-team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.our-team .carousel-controler {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.our-team .carousel-controler .control {
+  border: 1px solid wheat;
+  padding: 12px;
+  margin: 2px;
+  border-radius: 50%;
+}
+.our-team .hero-text-two {
+  font-size: clamp(1rem, 3vw + 1rem, 3.5rem);
+  width: 80%;
+  line-height: 45px;
+  font-family: "Bodoni Moda", serif;
+}
+.carousel-controler .control {
+  cursor: pointer;
+}
+.team_member {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid black;
+}

@@ -282,6 +282,7 @@ body {
   line-height: 50px;
   font-family: "Bodoni Moda", serif;
 }
+
 .content-two-container .content-two-right-side {
   display: flex;
   justify-content: flex-end;

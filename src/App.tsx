@@ -3,6 +3,7 @@ import ErrorPage from "./components/ErrorPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Test from "./components/Test";
+import OurTeam from "./components/OurTeam";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,11 @@ function App() {
       path: "/test",
       element: <Test />,
       errorElement: <Test />,
+    },
+    {
+      path: "/team",
+      element: <OurTeam />,
+      errorElement: <h1>Error Accessing this page</h1>,
     },
   ]);
   return (
