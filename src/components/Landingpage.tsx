@@ -5,6 +5,8 @@ import Tem from "../assets/Temshaircut/hair2.jpg";
 import OurServices from "./OurServices";
 import ReservationModal from "./Test";
 import OurTeam from "./OurTeam";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -109,8 +111,31 @@ const Landingpage = () => {
           </div>
         </section>
         <OurTeam />
+        <section>
+          <div className="testimonial_page">
+            <h1 className="some-text">What People Says</h1>
+          </div>
+          <div className="testimonies">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              loop={true}
+              speed={600}
+              autoplay={{ delay: 5000 }}
+              slidesPerView="auto"
+              pagination={{
+                el: "swiper-pagination",
+                type: "bullets",
+                clickable: true,
+              }}
+            >
+              <SwiperSlide>
+                <h1>hello wrold</h1>
+              </SwiperSlide>
+              
+            </Swiper>
+          </div>
+        </section>
       </div>
-       
     </div>
   );
 };

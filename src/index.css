@@ -364,6 +364,7 @@ body {
   }
   .content-two-container {
     grid-template-columns: 100%;
+    
   }
   .Menu-Icon {
     display: flex;
