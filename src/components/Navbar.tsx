@@ -52,16 +52,17 @@ const Navbar: FC = () => {
           </ul>
           <ul className="nav-links">
             <li className="hideOnMobile">
-              <a href="" className="a-tags">
+              <a href="/" className="a-tags logo-name">
                 <img
                   src={logo}
                   alt="barber logo"
                   style={{ width: "6rem", height: "auto" }}
                 />
+                temscutz
               </a>
             </li>
             <li className="hideOnMobile">
-              <a href="/home" className="a-tags">
+              <a href="/" className="a-tags">
                 Home
               </a>
             </li>

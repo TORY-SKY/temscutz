@@ -1,7 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperClass } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,9 +13,6 @@ import "./Swiper.css";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 const OurTeam: React.FC = () => {
-  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
-    null
-  );
   const swiperRef = useRef<any>(null);
 
   return (
@@ -43,7 +39,7 @@ const OurTeam: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="team_carousel">
+      <div className="team_carousel" style={{ width: "100%" }}>
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -53,10 +49,10 @@ const OurTeam: React.FC = () => {
             768: { slidesPerView: 2 }, // 2 slides on tablets
             1024: { slidesPerView: 2 }, // 3 slides on desktops and larger screens
           }}
-          slidesPerView={3}
+          slidesPerView={4}
           navigation
-          pagination={{ clickable: true, type: "fraction" }}
-          scrollbar={{ draggable: true }}
+          // pagination={{ clickable: true, type: "fraction" }}
+
           onSwiper={(swiperInstance) => {
             swiperRef.current = swiperInstance;
           }}
@@ -66,9 +62,11 @@ const OurTeam: React.FC = () => {
             <div className="img-container">
               <img src={img1} className="team_member" alt="team member" />
               <div className="sometext" style={{ color: "wheat" }}>
-                <h1>Terry G</h1>
-                <p>Experience 4 years</p>
-                <p>Cost 45$</p>
+                <div className="team-details">
+                  <h1>Terry G</h1>
+                  <p>Experience 4 years</p>
+                  <p>Cost 45$</p>
+                </div>
               </div>
             </div>
           </SwiperSlide>

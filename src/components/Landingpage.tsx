@@ -7,6 +7,9 @@ import ReservationModal from "./Test";
 import OurTeam from "./OurTeam";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import testimonials from "./testimonials";
+import Footer from "../Footer";
+
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -111,14 +114,18 @@ const Landingpage = () => {
           </div>
         </section>
         <OurTeam />
-        <section>
-          <div className="testimonial_page">
-            <h1 className="some-text">What People Says</h1>
+        <section className="testimoy-section">
+          <div className="header-container">
+            <div className="line"></div>
+            <h1 className="services">What People Say</h1>
+            <div className="line"></div>
           </div>
           <div className="testimonies">
+            <i className="arrow">"</i>
             <Swiper
               modules={[Pagination, Autoplay]}
               loop={true}
+              spaceBetween={50}
               speed={600}
               autoplay={{ delay: 5000 }}
               slidesPerView="auto"
@@ -128,14 +135,55 @@ const Landingpage = () => {
                 clickable: true,
               }}
             >
-              <SwiperSlide>
-                <h1>hello wrold</h1>
-              </SwiperSlide>
-              
+              {testimonials.map((testimony) => (
+                <SwiperSlide key={testimony.id}>
+                  <div className="testimony_container">
+                    <img src={testimony.img} alt="testimony" />
+                    <div className="testi">
+                      <p>{testimony.testimony}</p>
+                      <h2>{testimony.name}</h2>
+                      <p className="occupation">{testimony.occupation}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
+            <i>"</i>
+          </div>
+        </section>
+        <section>
+          <div className="header-container">
+            <div className="line"></div>
+            <h1 className="services">Our Products</h1>
+            <div className="line"></div>
           </div>
         </section>
       </div>
+      <section
+        className="section_to_footer"
+        style={{ borderBottom: "2px solid wheat" }}
+      >
+        <div className="footer-words">
+          <h1 className="footer_text">
+            Reach out to us for a style that suits you best!
+          </h1>
+          <div className="reservation-btn">
+            <button
+              className="about-us-btn landing-btn"
+              style={{
+                background: " wheat",
+                padding: "8px",
+                width: "160px",
+              }}
+              onClick={openModal}
+            >
+              Reserve Now
+            </button>
+            <ReservationModal isOpen={isModalOpen} onClose={closeModal} />
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 };

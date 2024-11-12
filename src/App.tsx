@@ -2,7 +2,6 @@ import Waitlist from "./Waitlist";
 import ErrorPage from "./components/ErrorPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Test from "./components/Test";
 import OurTeam from "./components/OurTeam";
 import MySwiperComponent from "./components/MySwiperComponent";
 

@@ -231,6 +231,8 @@ body {
 }
 .contents-words p {
   padding: 12px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
 }
 .hero-text {
   font-family: "Bodoni Moda", serif;
@@ -257,8 +259,7 @@ body {
   padding: 22px;
   color: white;
   background-color: var(--brown-color);
-  border-top-left-radius: 80px;
-  border-top-right-radius: 80px;
+  border-radius: 80px;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -350,10 +351,70 @@ body {
 .boxes-container {
   place-items: center;
 }
+
+.testimonies {
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimony_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  border: 1px solid var(--black-color);
+  border-radius: 25px;
+  gap: 45px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.testi h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 2rem;
+}
+.testi p {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.testi h1,
+p {
+  margin-bottom: 35px;
+}
+.testi .occupation {
+  color: wheat;
+  font-weight: 300 !important;
+}
+.testimoy-section {
+  margin-top: 85px;
+  margin-bottom: 85px;
+}
+.section_to_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footer-words {
+  margin: 25px;
+}
+.footer_text {
+  font-size: clamp(1rem, 3vw + 1rem, 3.5rem);
+  /* max-width: 80%; */
+  line-height: 45px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 65px;
+}
 * {
   /* outline: 1px solid red; */
 }
-
 @media (max-width: 800px) {
   .hideOnMobile {
     display: none;
@@ -364,7 +425,6 @@ body {
   }
   .content-two-container {
     grid-template-columns: 100%;
-    
   }
   .Menu-Icon {
     display: flex;
@@ -372,12 +432,22 @@ body {
   .boxes-container {
     grid-template-columns: 1fr !important;
   }
+  .header-container .line {
+    display: none;
+  }
 }
 @media (min-width: 800px) {
   .Menu-Icon {
     display: none;
   }
+  .header-container .line {
+    display: none;
+  }
   .boxes-container {
     grid-template-columns: 1fr 1fr 1fr !important;
+  }
+
+  .header-container .line {
+    display: none;
   }
 }
