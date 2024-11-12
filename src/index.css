@@ -3,9 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,18 +61,6 @@
     --chart-5: 340 75% 55%;
   }
 }
-@layer base {
-  * {
-    @apply border-border;
-    /* outline: 1px solid red; */
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
 
 /* fonts */
 body {
@@ -109,6 +94,11 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+}
+.logo-name {
+  font-size: 1.4rem;
+  font-family: "Bodoni Moda", serif;
+  color: goldenrod
 }
 /* FONT NAMES */
 

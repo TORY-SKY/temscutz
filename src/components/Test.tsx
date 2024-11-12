@@ -1,31 +1,77 @@
 import React, { useState } from "react";
 import "./ReservationModal.css"; // Import custom CSS for styling
 
+// Define the props for the modal component
+interface ReservationModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 const ReservationModal: React.FC<ReservationModalProps> = ({
   isOpen,
   onClose,
 }) => {
-  if (!isOpen) return null;
+  const [formData, setFormData] = useState({
+    name: "",
+    date: "",
+    time: "",
+    service: "haircut",
+  });
 
-  // leetcode
+  // Handle form input changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [id]: value }));
+  };
+
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Reservation Details:", formData);
+    // Further actions like sending data to a server can be done here
+    onClose();
+  };
+
+  // Prevent rendering when modal is closed
+  if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <h2>Make a Reservation</h2>
-        <button>print</button>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" placeholder="Your Name" required />
+          <input
+            type="text"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your Name"
+            required
+          />
 
           <label htmlFor="date">Date:</label>
-          <input type="date" id="date" required />
+          <input
+            type="date"
+            id="date"
+            value={formData.date}
+            onChange={handleChange}
+            required
+          />
 
           <label htmlFor="time">Time:</label>
-          <input type="time" id="time" required />
+          <input
+            type="time"
+            id="time"
+            value={formData.time}
+            onChange={handleChange}
+            required
+          />
 
-          <label htmlFor="services">Services:</label>
-          <select id="services">
+          <label htmlFor="service">Services:</label>
+          <select id="service" value={formData.service} onChange={handleChange}>
             <option value="haircut">Haircut</option>
             <option value="beard-trim">Beard Trim</option>
             <option value="shave">Shave & Facial</option>
@@ -35,7 +81,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
             Reserve
           </button>
         </form>
-        <button className="close-button " onClick={onClose}>
+        <button className="close-button" onClick={onClose}>
           Close
         </button>
       </div>

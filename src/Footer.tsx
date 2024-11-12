@@ -1,5 +1,4 @@
 import logo from "./assets/images/tem.png";
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 
 const Footer = () => {
   return (
@@ -21,9 +20,7 @@ const Footer = () => {
           <div className="menu">
             <h2>Get Connected</h2>
             <p>+2349032276730</p>
-            <div className="socials">
-
-            </div>
+            <div className="socials"></div>
           </div>
           <div className="opening_hour"></div>
         </div>

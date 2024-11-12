@@ -58,7 +58,7 @@ const Navbar: FC = () => {
                   alt="barber logo"
                   style={{ width: "6rem", height: "auto" }}
                 />
-                temscutz
+                Temscutz
               </a>
             </li>
             <li className="hideOnMobile">
