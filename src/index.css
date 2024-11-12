@@ -3,6 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -82,6 +85,7 @@ body {
   background-color: rgba(246, 231, 205, 0.863);
   font-size: 16px;
 }
+
 :root {
   --primery-color: wheat;
   /* --secondary-color: gold; */
@@ -396,9 +400,11 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-left: 2px solid wheat;
 }
 .footer-words {
   margin: 25px;
+  border-left: 1px solid wheat;
 }
 .footer_text {
   font-size: clamp(1rem, 3vw + 1rem, 3.5rem);
