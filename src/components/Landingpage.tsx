@@ -52,7 +52,7 @@ const Landingpage = () => {
         <section className="">
           <div
             className="content-two-container"
-            style={{ margin: "25px 25px" }}
+            style={{ margin: "65px 65px" }}
           >
             <div className="content-two-left-side">
               <h1 className="hero-text-two" style={{ marginBottom: "25px" }}>

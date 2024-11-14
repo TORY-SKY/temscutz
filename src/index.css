@@ -98,7 +98,7 @@ body {
 .logo-name {
   font-size: 1.4rem;
   font-family: "Bodoni Moda", serif;
-  color: goldenrod
+  color: goldenrod;
 }
 /* FONT NAMES */
 
@@ -394,7 +394,7 @@ p {
 }
 .footer-words {
   margin: 25px;
-  border-left: 1px solid wheat;
+
 }
 .footer_text {
   font-size: clamp(1rem, 3vw + 1rem, 3.5rem);
