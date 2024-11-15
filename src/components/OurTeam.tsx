@@ -16,9 +16,9 @@ const OurTeam: React.FC = () => {
   const swiperRef = useRef<any>(null);
 
   return (
-    <div className="carousel-container" style={{ margin: "65px 65px" }}>
+    <div className="carousel-container" style={{ margin: "35px 35px" }}>
       <div className="our-team">
-        <div className="team-header">
+        <div className="team-header" style={{marginBottom: "12px"}}>
           <h1 className="hero-text-two">Our Team Member</h1>
           <span></span>
         </div>

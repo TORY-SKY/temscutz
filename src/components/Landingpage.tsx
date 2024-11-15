@@ -10,6 +10,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import testimonials from "./testimonials";
 import Footer from "../Footer";
 
+
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -17,6 +18,7 @@ const Landingpage = () => {
   const closeModal = () => setIsModalOpen(false);
   return (
     <div className="landingpage-container">
+
       <div className="contents">
         <img
           src={heroImg}
@@ -52,7 +54,7 @@ const Landingpage = () => {
         <section className="">
           <div
             className="content-two-container"
-            style={{ margin: "65px 65px" }}
+            style={{ margin: "35px 35px" }}
           >
             <div className="content-two-left-side">
               <h1 className="hero-text-two" style={{ marginBottom: "25px" }}>
@@ -154,7 +156,7 @@ const Landingpage = () => {
         <section>
           <div className="header-container">
             <div className="line"></div>
-            <h1 className="services">Our Products</h1>
+            <h1 className="services">Contact Us</h1>
             <div className="line"></div>
           </div>
         </section>
@@ -184,6 +186,7 @@ const Landingpage = () => {
         </div>
       </section>
       <Footer />
+      
     </div>
   );
 };

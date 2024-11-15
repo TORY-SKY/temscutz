@@ -1,0 +1,34 @@
+.footer_sections .footer_menu {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  gap: 35px;
+  /* background-color: rgba(31, 30, 30, 0.882); */
+}
+.socials_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.footer_menu h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(1rem, 3vw + 1rem, 1.5rem);
+  color: goldenrod;
+  text-align: center;
+}
+* {
+  /* outline: 1px solid red; */
+}
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .footer_sections .footer_menu {
+    flex-direction: column;
+  }
+}
+@media (min-width: 800px) {
+}

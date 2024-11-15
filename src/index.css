@@ -262,10 +262,7 @@ body {
   display: grid;
   grid-template-columns: 40% 60%;
   align-self: center;
-  justify-self: center;
-  /* align-items: center; */
-  /* justify-content: space-around; */
-  /* padding: 20px; */
+  justify-content: center;
   place-items: center;
 }
 .content-two-left-side {
@@ -394,7 +391,6 @@ p {
 }
 .footer-words {
   margin: 25px;
-
 }
 .footer_text {
   font-size: clamp(1rem, 3vw + 1rem, 3.5rem);
@@ -446,4 +442,17 @@ p {
   .header-container .line {
     display: none;
   }
+  .content-two-container {
+    /* margin: 0 !important; */
+  }
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the video covers the viewport */
+  z-index: -1; /* Keeps the video behind other content */
+  opacity: 0.1; /* Adjust transparency for readability */
 }
