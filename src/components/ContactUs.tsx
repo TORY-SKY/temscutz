@@ -12,9 +12,9 @@ const ContactUs: React.FC = () => {
       emailjs
         .sendForm(
           "service_dyth752", // Replace with your EmailJS Service ID
-          "template_3rsgrzr", // Replace with your EmailJS Template ID
+          "template_4ajj7x6", // Replace with your EmailJS Template ID
           form.current,
-          "YAHvCVhdk4UzZWGj5" // Replace with your EmailJS User ID
+          "BXR08gKJf_aum3eR6yvqN" // Replace with your EmailJS User ID
         )
         .then(
           (result) => {
