@@ -18,10 +18,10 @@ const ContactUs: React.FC = () => {
         )
         .then(
           (result) => {
-            alert("Message sent successfully!");
+            alert(`Message sent successfully! ${result}`);
           },
           (error) => {
-            alert("An error occurred, please try again later.");
+            alert(`An error occurred, please try again later. ${error}`);
           }
         );
     }
