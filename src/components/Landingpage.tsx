@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import testimonials from "./testimonials";
 import Footer from "../Footer";
-
+import ContactUs from "./ContactUs";
 
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +18,6 @@ const Landingpage = () => {
   const closeModal = () => setIsModalOpen(false);
   return (
     <div className="landingpage-container">
-
       <div className="contents">
         <img
           src={heroImg}
@@ -123,7 +122,7 @@ const Landingpage = () => {
             <div className="line"></div>
           </div>
           <div className="testimonies">
-            <i className="arrow">"</i>
+            {/* <i className="arrow">"</i> */}
             <Swiper
               modules={[Pagination, Autoplay]}
               loop={true}
@@ -150,15 +149,12 @@ const Landingpage = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <i>"</i>
+            {/* <i>"</i> */}
           </div>
         </section>
         <section>
-          <div className="header-container">
-            <div className="line"></div>
-            <h1 className="services">Contact Us</h1>
-            <div className="line"></div>
-          </div>
+          <h1 className="services">Contact Us</h1>
+          <ContactUs />
         </section>
       </div>
       <section
@@ -186,7 +182,6 @@ const Landingpage = () => {
         </div>
       </section>
       <Footer />
-      
     </div>
   );
 };

@@ -1,0 +1,69 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: "Bodoni Moda", serif;
+  }
+  
+ 
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .contact-form label {
+    color: wheat;
+    font-size: 1.1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid wheat;
+    border-radius: 4px;
+    background-color: transparent;
+    color: wheat;
+  }
+  
+  .contact-form textarea {
+    height: 100px;
+  }
+  
+  .submit-button {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: wheat;
+    background-color: transparent;
+    border: 2px solid wheat;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: wheat;
+    color: black;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem;
+    }
+  
+    .submit-button {
+      font-size: 1rem;
+    }
+  }
+  

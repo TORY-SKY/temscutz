@@ -1,3 +1,15 @@
+.footer_sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.alrightReserved {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
 .footer_sections .footer_menu {
   display: flex;
   justify-content: space-around;

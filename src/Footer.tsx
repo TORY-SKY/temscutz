@@ -8,6 +8,7 @@ const Footer = () => {
     <div>
       <footer className="tems_footer">
         <div className="footer_sections">
+          
           <div className="footer_menu">
             <div className="tems_socials">
               <h2>Get Connected</h2>
@@ -36,6 +37,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+
             <div className="socials">
               <h2>OUR LOCATION</h2>
               <span>
@@ -48,7 +50,6 @@ const Footer = () => {
               <h2>HOURS OF OPERATION</h2>
               <div className="hours_of_op">
                 <span>Monday: 9 am–7 pm</span> <br />
-                <span>Monday: 9 am–7 pm</span> <br />
                 <span>Tuesday: 9 am–7 pm</span> <br />
                 <span>Wednesday: 9 am–7 pm</span> <br />
                 <span>Thursday: 9 am–7 pm</span>
@@ -57,23 +58,30 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <ul className="logo-text">
-            <li className="hideOnMobile">
-              <a
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="a-tags logo-name"
-              >
-                <img
-                  src={logo}
-                  alt="barber logo"
-                  style={{ width: "6rem", height: "auto" }}
-                />
-                temscutz
-              </a>
-            </li>
-          </ul>
+          <div className="alrightReserved">
+            <ul className="logo-text">
+              <li className="">
+                <a
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="a-tags logo-name"
+                >
+                  <img
+                    src={logo}
+                    alt="barber logo"
+                    style={{ width: "6rem", height: "auto" }}
+                  />
+                  temscutz
+                </a>
+              </li>
+            </ul>
+            <span>© 2024 Tems Cutz Barbershop - All Rights Reserved.</span>
+            <div>
+              <span>Design & Development by </span>
+              <span style={{ color: "goldenrod" }}>ToryCode</span>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
