@@ -14,7 +14,7 @@ const ContactUs: React.FC = () => {
           import.meta.env.VITE_EMAILJS_SERVICE_ID!, // Use your Service ID
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID!, // Use your Template ID
           form.current,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY! // Use your Public Key
+          import.meta.env.VITE_EMAILJS_PUBLIC_VAL! // Use your Public Key
         )
         .then(
           (result) => {
