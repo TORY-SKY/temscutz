@@ -128,6 +128,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .classA-nav li:hover {
   background-color: rgba(241, 240, 192, 0.17);
   color: black;
@@ -171,6 +172,7 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
 .reserve-btn::before {
   position: absolute;
   content: "";
@@ -181,6 +183,7 @@ body {
   top: 5px;
   z-index: -1;
 }
+
 /* side-bar */
 .side-bar.Open {
   display: flex;
@@ -434,7 +437,6 @@ p {
   }
   .services {
     font-size: 1.9rem;
-
   }
   .testimonies {
     margin: 0 !important;
