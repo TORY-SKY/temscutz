@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser"; // EmailJS for sending emails
 import "./ReservationModal.css"; // Import custom CSS for styling
 
 // Define the props for the modal component
@@ -26,11 +27,50 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
     setFormData((prevData) => ({ ...prevData, [id]: value }));
   };
 
+  // Function to send reservation details via EmailJS
+  const sendEmail = () => {
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        {
+          user_name: formData.name,
+          reservation_date: formData.date,
+          reservation_time: formData.time,
+          service: formData.service,
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result);
+          alert("Reservation details have been emailed successfully!");
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+          alert("Failed to send reservation details via email.");
+        }
+      );
+  };
+
+  // Function to send reservation details via WhatsApp
+  const sendWhatsApp = () => {
+    const phoneNumber = "YOUR_WHATSAPP_NUMBER"; // Replace the number
+    const whatsappMessage = `Hello, I would like to make a reservation:\n\nName: ${formData.name}\nDate: ${formData.date}\nTime: ${formData.time}\nService: ${formData.service}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+    window.open(whatsappUrl, "_blank"); // Open WhatsApp in a new tab
+  };
+
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Reservation Details:", formData);
-    // Further actions like sending data to a server can be done here
+    // Send reservation details via EmailJS
+    sendEmail();
+    // Send reservation details via WhatsApp
+    sendWhatsApp();
+    // Close the modal after submission
     onClose();
   };
 
@@ -90,3 +130,4 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
 };
 
 export default ReservationModal;
+

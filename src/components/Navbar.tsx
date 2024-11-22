@@ -44,7 +44,7 @@ const Navbar: FC = () => {
               }}
             >
               <ShoppingCartIcon />
-              <i className="cart-items">10</i>
+              <i className="cart-items">0</i>
             </li>
             <li className="reserve-btn li">
               <button className="a-tags">Reserve Now</button>
