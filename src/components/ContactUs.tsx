@@ -11,10 +11,10 @@ const ContactUs: React.FC = () => {
     if (form.current) {
       emailjs
         .sendForm(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID!, // Use your Service ID
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID!, // Use your Template ID
+          import.meta.env.VITE_EMAILJS_SERVICE_ID!, // Use your Service ID
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID!, // Use your Template ID
           form.current,
-          process.env.REACT_APP_EMAILJS_PUBLIC_KEY! // Use your Public Key
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY! // Use your Public Key
         )
         .then(
           (result) => {
@@ -34,14 +34,24 @@ const ContactUs: React.FC = () => {
     <div className="contact-container">
       <h2>Contact Us</h2>
       <form ref={form} onSubmit={sendEmail} className="contact-form">
-        <label>Name</label>
+        <label htmlFor="name">Name</label>
         <input type="text" name="user_name" required placeholder="Your Name" />
 
-        <label>Email</label>
-        <input type="email" name="user_email" required placeholder="Your Email" />
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          name="user_email"
+          required
+          placeholder="Your Email"
+        />
 
-        <label>Message</label>
-        <textarea name="message" required placeholder="Your Message"></textarea>
+        <label htmlFor="message">Message</label>
+        <textarea
+          name="message"
+          required
+          placeholder="Your Message"
+          rows={5}
+        ></textarea>
 
         <button type="submit" className="submit-button">
           Send Message
@@ -52,4 +62,3 @@ const ContactUs: React.FC = () => {
 };
 
 export default ContactUs;
-
