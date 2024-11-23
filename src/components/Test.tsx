@@ -27,35 +27,9 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
     setFormData((prevData) => ({ ...prevData, [id]: value }));
   };
 
-  // Function to send reservation details via EmailJS
-  const sendEmail = () => {
-    emailjs
-      .send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
-        {
-          user_name: formData.name,
-          reservation_date: formData.date,
-          reservation_time: formData.time,
-          service: formData.service,
-        },
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
-      )
-      .then(
-        (result) => {
-          console.log("Email sent successfully:", result);
-          alert("Reservation details have been emailed successfully!");
-        },
-        (error) => {
-          console.error("Error sending email:", error);
-          alert("Failed to send reservation details via email.");
-        }
-      );
-  };
-
   // Function to send reservation details via WhatsApp
   const sendWhatsApp = () => {
-    const phoneNumber = "YOUR_WHATSAPP_NUMBER"; // Replace the number
+    const phoneNumber = "08121766402"; // Replace the number
     const whatsappMessage = `Hello, I would like to make a reservation:\n\nName: ${formData.name}\nDate: ${formData.date}\nTime: ${formData.time}\nService: ${formData.service}`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
       whatsappMessage
@@ -66,8 +40,6 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Send reservation details via EmailJS
-    sendEmail();
     // Send reservation details via WhatsApp
     sendWhatsApp();
     // Close the modal after submission
@@ -117,7 +89,11 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
             <option value="shave">Shave & Facial</option>
           </select>
 
-          <button type="submit" className="submit-button">
+          <button
+            // type="submit"
+            onClick={sendWhatsApp}
+            className="submit-button"
+          >
             Reserve
           </button>
         </form>
@@ -130,4 +106,3 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
 };
 
 export default ReservationModal;
-
