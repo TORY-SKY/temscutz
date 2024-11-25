@@ -17,6 +17,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
     name: "",
     date: "",
     time: "",
+    email: "",
     service: "haircut",
   });
 
@@ -73,12 +74,11 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
           <input
             type="text"
             id="email"
-            value={formData.name}
+            value={formData.email}
             onChange={handleChange}
             placeholder="Your email address"
             required
           />
-          
 
           <input
             type="date"
@@ -95,13 +95,17 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
             onChange={handleChange}
             required
           />
-
-          <select id="service" value={formData.service} onChange={handleChange}>
-            <option value="haircut">Haircut</option>
-            <option value="beard-trim">Beard Trim</option>
-            <option value="shave">Shave & Facial</option>
-          </select>
-
+          <div className="selectt">
+            <select
+              id="service"
+              value={formData.service}
+              onChange={handleChange}
+            >
+              <option value="haircut">Haircut</option>
+              <option value="beard-trim">Beard Trim</option>
+              <option value="shave">Shave & Facial</option>
+            </select>
+          </div>
           <button
             // type="submit"
             onClick={sendWhatsApp}
