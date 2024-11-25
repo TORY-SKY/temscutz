@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser"; // EmailJS for sending emails
+import logo from "../assets/images/tem.png";
+
 import "./ReservationModal.css"; // Import custom CSS for styling
 
 // Define the props for the modal component
-interface ReservationModalProps {
+export interface ReservationModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
@@ -52,9 +53,15 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <h2>Make a Reservation</h2>
+        <div className="img">
+          <img
+            src={logo}
+            alt="barber logo"
+            style={{ width: "6rem", height: "auto" }}
+          />
+        </div>
+        <h2 className="make-a-reservation">Make a Reservation</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
@@ -63,8 +70,16 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
             placeholder="Your Name"
             required
           />
+          <input
+            type="text"
+            id="email"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your email address"
+            required
+          />
+          
 
-          <label htmlFor="date">Date:</label>
           <input
             type="date"
             id="date"
@@ -73,7 +88,6 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
             required
           />
 
-          <label htmlFor="time">Time:</label>
           <input
             type="time"
             id="time"
@@ -82,7 +96,6 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
             required
           />
 
-          <label htmlFor="service">Services:</label>
           <select id="service" value={formData.service} onChange={handleChange}>
             <option value="haircut">Haircut</option>
             <option value="beard-trim">Beard Trim</option>

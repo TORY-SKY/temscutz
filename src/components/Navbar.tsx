@@ -1,10 +1,13 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import logo from "../assets/images/tem.png";
 
-const Navbar: FC = () => {
+interface ReservationModal {
+  openModal: () => void;
+}
+const Navbar = ({ openModal }: ReservationModal) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -47,7 +50,9 @@ const Navbar: FC = () => {
               <i className="cart-items">0</i>
             </li>
             <li className="reserve-btn li">
-              <button className="a-tags">Reserve Now</button>
+              <button className="a-tags" onClick={openModal}>
+                Reserve Now
+              </button>
             </li>
           </ul>
           <ul className="nav-links">
@@ -92,7 +97,9 @@ const Navbar: FC = () => {
               <i className="cart-items">0</i>
             </li>
             <li className="reserve-btn hideOnMobile">
-              <button className="a-tags">Reserve Now</button>
+              <button className="a-tags" onClick={openModal}>
+                Reserve Now
+              </button>
             </li>
             <li onClick={toggleSidebar} className="Menu-Icon">
               <MenuIcon />

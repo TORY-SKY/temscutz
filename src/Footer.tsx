@@ -3,12 +3,12 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import "./components/footer.css";
+
 const Footer = () => {
   return (
     <div>
       <footer className="tems_footer">
         <div className="footer_sections">
-          
           <div className="footer_menu">
             <div className="tems_socials">
               <h2>Get Connected</h2>

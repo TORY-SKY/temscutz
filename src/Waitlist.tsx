@@ -1,10 +1,9 @@
 import Landingpage from "./components/Landingpage";
-import Navbar from "./components/Navbar";
 
 const Waitlist = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Landingpage />
     </div>
   );
