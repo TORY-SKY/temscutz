@@ -10,7 +10,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import testimonials from "./testimonials";
 import Footer from "../Footer";
 import ContactUs from "./ContactUs";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
 
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -111,6 +111,7 @@ const Landingpage = () => {
                   width: "120px",
                   marginTop: "25px",
                 }}
+                onClick={openModal}
               >
                 Reserve Now
               </button>
@@ -184,7 +185,7 @@ const Landingpage = () => {
           </div>
         </div>
       </section>
-      <Footer  />
+      <Footer />
     </div>
   );
 };

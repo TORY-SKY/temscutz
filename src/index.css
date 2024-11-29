@@ -103,7 +103,9 @@ body {
 /* FONT NAMES */
 
 /* navigation bar */
-
+.navigation-bar {
+  gap: 0 !important;
+}
 .classA-nav .nav-links {
   width: 100%;
   display: flex;
@@ -249,7 +251,7 @@ body {
 .landingpage-container {
   display: flex;
   flex-direction: column;
-  gap: 95px;
+  gap: 50px;
 }
 .content-two {
   position: relative;

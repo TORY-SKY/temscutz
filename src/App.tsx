@@ -4,6 +4,7 @@ import ErrorPage from "./components/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OurTeam from "./components/OurTeam";
 import MySwiperComponent from "./components/MySwiperComponent";
+import AboutUs from "./components/AboutUs";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,12 +21,18 @@ function App() {
     {
       path: "/test",
       element: <MySwiperComponent />,
-      errorElement: <h1>Error</h1>,
+      errorElement: <ErrorPage />,
     },
+    {
+      path: "/aboutus",
+      element: <AboutUs />,
+      errorElement: <ErrorPage />,
+    },
+
     {
       path: "/team",
       element: <OurTeam />,
-      errorElement: <h1>Error Accessing this page</h1>,
+      errorElement: <ErrorPage />,
     },
   ]);
   return (
