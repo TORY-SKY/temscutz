@@ -56,10 +56,11 @@ const Navbar = ({ openModal }: ReservationModal) => {
             </li>
           </ul>
           <ul className="nav-links">
-            <li className="hideOnMobile">
+            <li className=" the-logo-img">
               <a href="/" className="a-tags logo-name">
                 <img
                   src={logo}
+                  className="hideOnMobile"
                   alt="barber logo"
                   style={{ width: "6rem", height: "auto" }}
                 />

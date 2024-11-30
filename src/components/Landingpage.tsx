@@ -38,7 +38,7 @@ const Landingpage = () => {
         </div>
         <div className="reservation-btn">
           <button
-            className="about-us-btn landing-btn"
+            className=" landing-btn"
             style={{
               background: " wheat",
               padding: "8px",
@@ -119,6 +119,7 @@ const Landingpage = () => {
           </div>
         </section>
         <OurTeam />
+
         <section className="testimoy-section">
           <div className="header-container">
             <div className="line"></div>
