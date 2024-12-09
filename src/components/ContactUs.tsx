@@ -23,7 +23,10 @@ const ContactUs: React.FC = () => {
           },
           (error) => {
             alert("An error occurred, please try again later.");
-            console.error("Email error:", error);
+            console.error(
+              "Email error:",
+              error + " " + "EmailJS server error"
+            );
           }
         );
       form.current.reset(); // Clear the form after sending

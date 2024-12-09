@@ -4,7 +4,6 @@ import ErrorPage from "./components/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OurTeam from "./components/OurTeam";
 import MySwiperComponent from "./components/MySwiperComponent";
-import AboutUs from "./components/AboutUs";
 
 function App() {
   const router = createBrowserRouter([
@@ -25,7 +24,7 @@ function App() {
     },
     {
       path: "/aboutus",
-      element: <AboutUs />,
+      element: <ErrorPage />,
       errorElement: <ErrorPage />,
     },
 
