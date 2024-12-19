@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/images/tem.png";
-
 import "./ReservationModal.css"; // Import custom CSS for styling
+import { motion } from "framer-motion";
 
 // Define the props for the modal component
 export interface ReservationModalProps {
@@ -53,7 +53,13 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <motion.div
+        initial={{ x: "-100vw", y: "-100vw" }}
+        animate={{ x: 0, y: 0 }}
+        transition={{ delay: 0.1, duration: 1 }}
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="img">
           <img
             src={logo}
@@ -117,7 +123,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
         <button className="close-button" onClick={onClose}>
           Close
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 };
