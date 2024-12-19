@@ -9,6 +9,7 @@ const ContactUs: React.FC = () => {
     e.preventDefault();
 
     if (form.current) {
+      console.log(form);
       emailjs
         .sendForm(
           import.meta.env.VITE_EMAILJS_SERVICE_ID!, // Use your Service ID
@@ -23,10 +24,7 @@ const ContactUs: React.FC = () => {
           },
           (error) => {
             alert("An error occurred, please try again later.");
-            console.error(
-              "Email error:",
-              error + " " + "EmailJS server error"
-            );
+            console.error("Email error:", error + " " + "EmailJS server error");
           }
         );
       form.current.reset(); // Clear the form after sending
