@@ -155,7 +155,7 @@ const OurServices: React.FC = () => {
             }}
           >
             <img src={haircutIcon} alt="hair-cut" />
-            <h2>Haircut</h2>
+            <h2>Dreadlocks</h2>
             <p>
               Experience a fresh and stylish haircut tailored to your preference
               by our expert barbers.
@@ -189,7 +189,7 @@ const OurServices: React.FC = () => {
             }}
           >
             <img src={beardtrim} alt="hair-cut" />
-            <h2>Beard Trim</h2>
+            <h2>Hair Colouring</h2>
             <p>
               Keep your beard looking sharp and well-groomed with our precise
               trimming services.
@@ -223,7 +223,7 @@ const OurServices: React.FC = () => {
             }}
           >
             <img src={shave} alt="hair-cut" />
-            <h2>Shave & Facial</h2>
+            <h2>Pedicure</h2>
             <p>
               Enjoy a relaxing shave and rejuvenating facial treatment for a
               clean and refreshed look.

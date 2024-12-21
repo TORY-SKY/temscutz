@@ -3,6 +3,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import "./components/footer.css";
+import tiktok from "./assets/images/tiktok-icon.svg";
 
 const Footer = () => {
   return (
@@ -29,10 +30,12 @@ const Footer = () => {
                   <FacebookIcon style={{ fontSize: 40, color: "#000" }} />
                 </a>
                 <a
-                  href=""
                   target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://l.instagram.com/?u=https%3A%2F%2Fwww.tiktok.com%2F%40temscutz%3F_t%3D8pN6afcGIfG%26_r%3D1%26fbclid%3DPAZXh0bgNhZW0CMTEAAaYToAzjs_mTali8dvrL0k4XtYyytRvaJRP0IeG5TrQuD2L4K-Y2cCuQMfw_aem_uqZDBp6Y3C1qqvFrvyRduw&e=AT3MexK1lhVMNcBJf_Os9fFAui4_kdDhoiTBwihrtWGF5YviiEhYPT23hkI51Z5llW0AxGAo2GVNuPiTL3TxTkizJ_SPhjvDEu98gA"
                 >
+                  <img src={tiktok} alt="" style={{ width: 24 }} />
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer">
                   <TwitterIcon style={{ fontSize: 40, color: "#000" }} />
                 </a>
               </div>
