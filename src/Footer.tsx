@@ -29,7 +29,7 @@ const Footer = () => {
                   <FacebookIcon style={{ fontSize: 40, color: "#000" }} />
                 </a>
                 <a
-                  href="https://www.instagram.com/temscutzbarberstudio/p/CzyN2quI_7W/?img_index=1"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                 >

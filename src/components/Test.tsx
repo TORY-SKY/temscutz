@@ -50,13 +50,15 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
 
   // Prevent rendering when modal is closed
   if (!isOpen) return null;
+ 
+  // console.log();
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <motion.div
-        initial={{ x: "-100vw", y: "-100vw" }}
-        animate={{ x: 0, y: 0 }}
-        transition={{ delay: 0.1, duration: 1 }}
+        initial={{ y: "-700vw", width: 0 }}
+        animate={{ y: 0, width: "100%" }}
+        transition={{ duration: 1.3 }}
         className="modal-content"
         onClick={(e) => e.stopPropagation()}
       >
