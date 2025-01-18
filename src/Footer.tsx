@@ -60,6 +60,10 @@ const Footer = () => {
                 <span>Friday: 7 am–7 pm</span>
               </div>
             </div>
+            {/* today im doing what you called coding for fun
+            what the heck I'm I doing for goodness sake
+            pretty awesome isn't it, great 
+         */}
           </div>
           <div className="alrightReserved">
             <ul className="logo-text">
